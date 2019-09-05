@@ -12,7 +12,18 @@ public class UsuarioDAO {
     ResultSet rs;
 
     public Usuario validar(String user, String pass) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "select * from usuarios where mail='"+user+"' and password='"+pass+"'";
+        try {
+        con = cn.Conexion();
+        ps = con.prepareStatement(sql);
+        rs = ps.executeQuery();
+        while (rs.next()) {
+            Usuario u = new Usuario();
+            u.setUsuario(rs.getString(1));
+            u.setPassword(rs.getString(2));
+            }
+        } catch (Exception e) {
+        }
+        return null;
+       }
     }
-
-}

@@ -1,48 +1,65 @@
-<%@ page pageEncoding="UTF-8" %>
-<nav class="navbar navbar-expand-lg navbar-light bg-light"  >
-  <a class="navbar-brand" href="#">Eventos Centro de Convenciones Estacion Belgrano</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-          <a class="nav-link" href="main.jsp">Inicio <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.santafeciudad.gov.ar/">Santa Fe Ciudad</a>
-      </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Eventos
-          </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="Controlador">Agregar Evento</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Listar Evento</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Modificar Evento</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Eliminar Evento</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Espacios
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Agregar espacio</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Listar espacio</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Modificar espacio</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Eliminar espacio</a>
-        </div>
-          
-      </li>
-      
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light"  >
+    <a class="navbar-brand" href="main.jsp">Centro de Convenciones Estacion Belgrano</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Espacios
+                </a>
+                <ul class="dropdown-menu sub-menu">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Planta baja
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Planta Alta
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Reservar
+                        </a>
+                    </li>
+                    
+                    <li class="dropdown-submenu">
+                        <a class="trigger right-caret" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ABM
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"  href="Controlador?accion=AgregarEspacio">Agregar espacio</a>
+                            <div class="dropdown-divider"></div>      
+                            <a class="dropdown-item" href="#">Listar espacio</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Modificar espacio</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Controlador?accion=DeleteEspacio">Eliminar espacio</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Eventos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Controlador">Agregar evento</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Listar evento</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Modificar evento</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Eliminar evento</a>
+                </div>
+            </li>
+            <li class="nav-item active" >
+                <a class="nav-link" href="https://www.santafeciudad.gov.ar/" target="_blank">Santa Fe Ciudad</a>
+            </li>
+        </ul>
     </div>
 </nav>
