@@ -27,8 +27,8 @@ public class Controlador extends HttpServlet {
             case "iniciarSesion": {
                 String nombre = request.getParameter("nombreUsuario");
                 String pass = request.getParameter("password");
-                    UsuarioDAO uDAO= new UsuarioDAO();
-                   Usuario user= uDAO.validar(nombre, pass);
+                UsuarioDAO uDAO= new UsuarioDAO();
+                Usuario user= uDAO.validar(nombre, pass);
                 if (user!=null) {
                     response.sendRedirect("main.jsp");
                 } else {
