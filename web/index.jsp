@@ -8,7 +8,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
-        <form  style="width: 340px; margin: 50px auto;" action="Controlador?accion=iniciarSesion" method="post">
+        <form  style="width: 340px; margin: 50px auto;" action="validacion" method="post">
             <center>
                 <h2>Iniciar Sesion</h2>
             </center>
@@ -27,7 +27,7 @@
             </div>
 
             <center>
-                <button type="submit"  class="btn btn-success">Ingresar</button>
+                <button type="submit" name="accion" value="iniciarSesion" class="btn btn-success">Ingresar</button>
             </center>
         </form>
 

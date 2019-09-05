@@ -6,54 +6,41 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Agenda;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
 
-public class Controlador extends HttpServlet {
+
+public class validacion extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-
-        //String nombreDefecto = "esteban";
-        //String passDefecto = "esteban1";
-        //Agenda agenda1 = new Agenda();
-
+        
+        Usuario u= new Usuario();
+        UsuarioDAO udao= new UsuarioDAO();
+        
         String accion = request.getParameter("accion");
 
-        /*switch (accion) {
-            case "iniciarSesion": {
+        if(accion.equals("iniciarSesion")) {
                 String nombre = request.getParameter("nombreUsuario");
                 String pass = request.getParameter("password");
-                UsuarioDAO uDAO= new UsuarioDAO();
-                Usuario user= uDAO.validar(nombre, pass);
-                if (user!=null) {
-                    response.sendRedirect("main.jsp");
+                u = udao.validar(nombre, pass);     
+                if (u!=null) {
+                    request.getRequestDispatcher("controlador?login=Index").forward(request, response);;
                 } else {
                     response.sendRedirect("index.jsp");
                 }
             }
-            break;
-            */
-        String login = request.getParameter("login");
-        if (login.equals("Principal")) { //AL VALIDAR EL USUARIO, NOS REDIRIGE A LA PANTALLA PRINCIPAL.
-            request.getRequestDispatcher("main.jsp").forward(request, response);
-        }
-           /* case "AgregarEspacio": {
-                request.getRequestDispatcher("AddEspacio.jsp").forward(request, response);
-            }
-                break;
-            case "DeleteEspacio":
-                request.getRequestDispatcher("DeleteEspacio.jsp").forward(request, response);
-                break;
-
-        }
-        */
+        
+        
+        
+        
+        
+        
     }
 
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

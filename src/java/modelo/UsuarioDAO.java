@@ -13,15 +13,18 @@ public class UsuarioDAO {
 
     public Usuario validar(String user, String pass) {
         String sql = "select * from usuarios where mail='"+user+"' and password='"+pass+"'";
+        Usuario usuario;
         try {
-        con = cn.Conexion();
-        ps = con.prepareStatement(sql);
-        rs = ps.executeQuery();
-        while (rs.next()) {
-            Usuario u = new Usuario();
-            u.setUsuario(rs.getString(1));
-            u.setPassword(rs.getString(2));
-            }
+            con = cn.Conexion();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+       
+            while (rs.next()) {
+            usuario= new Usuario();
+            usuario.setUsuario(rs.getString(1));
+            usuario.setPassword(rs.getString(2));
+            return usuario;
+        }
         } catch (Exception e) {
         }
         return null;
