@@ -10,23 +10,22 @@ import modelo.Usuario;
 import modelo.UsuarioDAO;
 
 
-public class validacion extends HttpServlet {
 
+public class validacion extends HttpServlet {
+    
+    Usuario u= new Usuario();
+    UsuarioDAO udao= new UsuarioDAO();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
-        Usuario u= new Usuario();
-        UsuarioDAO udao= new UsuarioDAO();
-        
         String accion = request.getParameter("accion");
 
         if(accion.equals("iniciarSesion")) {
                 String nombre = request.getParameter("nombreUsuario");
                 String pass = request.getParameter("password");
                 u = udao.validar(nombre, pass);     
-                if (u!=null) {
+                if (nombre!=null) {
                     request.getRequestDispatcher("controlador?login=Index").forward(request, response);;
                 } else {
                     response.sendRedirect("index.jsp");
