@@ -1,9 +1,9 @@
 package modelo;
 
 public class Usuario {
-   private int id;
-   private  String usuario;
-   private  String password;
+    int id;
+     String usuario;
+     String password;
 
     public Usuario() {
     }

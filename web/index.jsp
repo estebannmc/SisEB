@@ -12,7 +12,7 @@
     <body>
         <div class="login-form">
             <img src="images/SFC_grid.png" class="icon" alt=""/>
-            <form   accion="controlador" method="POST">
+            <form   action="validacion" method="POST">
                 <br>
                 <br>
                 <br>
@@ -34,7 +34,7 @@
                 </div>
 
                 <center>
-                    <button type="submit"  class="btn btn-success">Ingresar</button>
+                    <button type="submit" name="accion" value="iniciarSesion" class="btn btn-success">Ingresar</button>
                 </center>
             </form>
         </div>

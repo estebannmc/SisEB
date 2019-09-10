@@ -26,7 +26,12 @@ public class Controlador extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         String accion = request.getParameter("accion");
-
+        String menu = request.getParameter("menu");
+        if (menu.equals("main")) {
+            request.getRequestDispatcher("main.jsp").forward(request, response);
+        }
+        
+        
         switch (accion) {
             case "iniciarSesion": {
                 String nombre = request.getParameter("nombreUsuario");
@@ -40,7 +45,8 @@ public class Controlador extends HttpServlet {
             }
             break;
 
-            case "AgregarEspacio": {
+            case "agregarEspacio": {
+                request.getRequestDispatcher("index.jsp").forward(request, response);
 
                 String nombre = request.getParameter("txtName");
                 int capacidad = Integer.parseInt(request.getParameter("txtCapacidad"));
@@ -52,16 +58,15 @@ public class Controlador extends HttpServlet {
 
                 espDAO.addEspacio(esp);
                 request.getRequestDispatcher("Controlador?ListarEspacio=Listar").forward(request, response);
-                request.getRequestDispatcher("main.jsp").forward(request, response);
-
+                
             }
             break;
 
-            case "DeleteEspacio": //EliminarEspacio
+            case "deleteEspacio": //EliminarEspacio
                 idx = Integer.parseInt(request.getParameter("id"));
                 espDAO.deleteEspacio(idx);
-                request.getRequestDispatcher("Controlador?ListarEspacio=Listar").forward(request, response);
-                request.getRequestDispatcher("main.jsp").forward(request, response);
+                request.getRequestDispatcher("Controlador?accion=listarEspacio").forward(request, response);
+               // request.getRequestDispatcher("main.jsp").forward(request, response);
                 
                 break;
 
@@ -73,7 +78,7 @@ public class Controlador extends HttpServlet {
                 request.getRequestDispatcher("main.jsp").forward(request, response);
             }
             break;
-            case "ListarEspacio":
+            case "listarEspacio":
                 List<Espacio> lista = new ArrayList<>();
                     lista = espDAO.listarEspacio();
                     request.setAttribute("lugares", lista);
@@ -82,7 +87,7 @@ public class Controlador extends HttpServlet {
         
         }
         }
-    }
+    
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
         /**

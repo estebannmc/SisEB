@@ -1,13 +1,14 @@
 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
     <a class="navbar-brand" href="main.jsp">Centro de Convenciones Estacion Belgrano</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
+    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown active" action="Controlador">
                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Espacios
                 </a>
@@ -23,7 +24,7 @@
                     </li>
                     
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Reservar
+                        <a class="btn" href="Controlador?accion=agregarEspacio" target="myFrame" > Reservar
                         </a>
                     </li>
                     
@@ -31,13 +32,13 @@
                         <a class="trigger right-caret" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ABM
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item"  href="Controlador?accion=AgregarEspacio">Agregar espacio</a>
+                            <a class="dropdown-item"  href="agregarEspacio">Agregar espacio</a>
                             <div class="dropdown-divider"></div>      
-                            <a class="dropdown-item" href="#">Listar espacio</a>
+                            <a class="dropdown-item" href="listarEspacio">Listar espacio</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Modificar espacio</a>
+                            <a class="dropdown-item" href="actualizarEspacio">Modificar espacio</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Controlador?accion=DeleteEspacio">Eliminar espacio</a>
+                            <a class="dropdown-item" href="deleteEspacio">Eliminar espacio</a>
                         </div>
                     </li>
                 </ul>
@@ -48,13 +49,13 @@
                     Eventos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="Controlador">Agregar evento</a>
+                    <a class="dropdown-item" href="Controlador?agregarEvento">Agregar evento</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Listar evento</a>
+                    <a class="dropdown-item" href="Controlador?listarEvento">Listar evento</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Modificar evento</a>
+                    <a class="dropdown-item" href="Controlador?">Modificar evento</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Eliminar evento</a>
+                    <a class="dropdown-item" href="Controlador?">Eliminar evento</a>
                 </div>
             </li>
             <li class="nav-item active" >

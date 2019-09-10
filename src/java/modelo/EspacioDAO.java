@@ -86,7 +86,7 @@ public class EspacioDAO {
                 e.setCapacidad(rs.getInt(3));
                 e.setLugar(rs.getString(3));
                 }
-        } catch (Exception e) {
+        } catch (Exception ex) {
         }
         return e;
     }

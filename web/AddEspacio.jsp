@@ -8,8 +8,9 @@
 
     </head>
     <body>
-        <%@include file="WEB-INF/menu.jspf" %>
-        <form style="width: 340px; margin: 50px auto;">
+      
+        
+        <form style="width: 340px; margin: 50px auto;" >
             <div class="form-group">
                 <label for="exampleFormControlInput1">Nombre del espacio</label>
                 <input type="txtName" class="form-control" placeholder="Ejemplo: Sala Manuel Belgrano">
