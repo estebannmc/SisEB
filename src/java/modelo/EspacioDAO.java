@@ -15,7 +15,7 @@ public class EspacioDAO {
     ResultSet rs;
 
     public List listarEspacio() {
-        String sql = "select * from eventos";
+        String sql = "select * from espacios";
         List<Evento> lista = new ArrayList<>();
         try {
             con = cn.Conexion();
@@ -74,4 +74,20 @@ public class EspacioDAO {
 
     }
 
+    public Espacio listarId(int id) {
+        Espacio e = new Espacio();
+        String sql = "select * from espacios where idEspacio=" + id;
+        try {
+            con = cn.Conexion();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                e.setNombre(rs.getString(2));
+                e.setCapacidad(rs.getInt(3));
+                e.setLugar(rs.getString(3));
+                }
+        } catch (Exception e) {
+        }
+        return e;
+    }
 }

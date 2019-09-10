@@ -12,19 +12,20 @@
         <form style="width: 340px; margin: 50px auto;">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Nombre del espacio</label>
-                <input type="txt" class="form-control" placeholder="Ejemplo: Sala Manuel Belgrano">
+                <input type="txtName" class="form-control" placeholder="Ejemplo: Sala Manuel Belgrano">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput2">Capacidad del espacio</label>
+                <input type="txtCapacidad" class="form-control" placeholder="Ejemplo: 20 personas">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Ubicacion fisica</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select type="selecLugar" class="form-control" id="exampleFormControlSelect1">
                     <option>Planta Alta</option>
                     <option>Planta Baja</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput2">Capacidad del espacio</label>
-                <input type="txt" class="form-control" placeholder="Ejemplo: 20 personas">
-            </div>
+            
         </form>
         
         
