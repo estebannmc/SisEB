@@ -1,5 +1,4 @@
 .header {
-  
   background-size: cover;
   min-height: 100vh;
 }
@@ -9,12 +8,7 @@
   background-color: transparent !important;
 }
 
-#myFrame {
-    position: relative;
-    top:0;
-    z-index: 1;
-}
-.body{
-   background: url(images/IMG_5397.jpeg) no-repeat center; 
-   opacity: 50%; 
+.img {
+    size: 302px;
+    
 }
