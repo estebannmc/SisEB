@@ -9,7 +9,7 @@
     </head>
     <body>
         <%@include file="WEB-INF/menu.jspf" %>
-        <iframe name="myFrame" width="100%" height="200"> </iframe>
+        
         <div class="row">
             <div class="col-12 col-md-6">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
